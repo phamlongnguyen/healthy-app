@@ -1,0 +1,39 @@
+@use '../../styles/media' as *;
+
+.meat-history {
+  @include maxWidthContent;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.25rem;
+  row-gap: 0.25rem;
+  margin-bottom: 2rem;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__item {
+    height: 241px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    p {
+      font-family: Inter;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.15000000596046448px;
+      text-align: left;
+      text-underline-position: from-font;
+      background: var(--color-primary-300);
+      width: fit-content;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      color: var(--color-white);
+    }
+  }
+}
