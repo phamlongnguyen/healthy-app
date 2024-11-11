@@ -1,3 +1,15 @@
 @use '../../styles/media' as *;
 .dashboard-page {
+  &__top {
+    height: 316px;
+    @include tablet {
+      height: fit-content;
+    }
+  }
+  &__button {
+    @include maxWidthContent;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
 }
