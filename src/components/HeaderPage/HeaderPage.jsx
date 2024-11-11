@@ -9,7 +9,7 @@ import './styles.scss'
 import logoPng from '../../assets/images/logo.png'
 
 const MENUS = [
-  { label: '自分の記録', key: 'my-record', url: '', icon: <IconNote /> },
+  { label: '自分の記録', key: 'my-record', icon: <IconNote /> },
   {
     label: 'チャレンジ',
     key: 'challenge',
