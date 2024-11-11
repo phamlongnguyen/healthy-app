@@ -1,0 +1,85 @@
+@use '../../styles/media' as *;
+
+.my-diary {
+  &__title {
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0.10999999940395355px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--color-dark-500);
+    @include tablet {
+      padding: 0 1rem;
+    }
+  }
+
+  &__body {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    color: var(--color-dark-500);
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 1rem;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      border: 2px solid var(--color-gray-400);
+      padding: 1.5rem;
+
+      &__date {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.09000000357627869px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+
+      &__title {
+        font-family: Hiragino Kaku Gothic Pro;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 17px;
+        letter-spacing: 0.05999999865889549px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        padding-top: 0.5rem;
+      }
+
+      &__des {
+        font-family: Hiragino Kaku Gothic Pro;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 17px;
+        letter-spacing: 0.05999999865889549px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+}
