@@ -1,21 +1,26 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import {
   IconAchievement,
   IconCaution,
   IconKebabMenu,
   IconNote,
-} from '../../assets/icons';
-import './styles.scss';
-import logoPng from '../../assets/images/logo.png';
+} from '../../assets/icons'
+import './styles.scss'
+import logoPng from '../../assets/images/logo.png'
 
 const MENUS = [
-  { label: '自分の記録', key: 'my-record', url: '/', icon: <IconNote /> },
-  { label: 'チャレンジ', key: 'challenge', icon: <IconAchievement /> },
+  { label: '自分の記録', key: 'my-record', url: '', icon: <IconNote /> },
+  {
+    label: 'チャレンジ',
+    key: 'challenge',
+    url: 'column',
+    icon: <IconAchievement />,
+  },
   { label: 'お知らせ', key: 'notice', icon: <IconCaution /> },
-];
+]
 
 const HeaderPage = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   return (
     <header className="header-page">
       <div className="header-page__box">
@@ -37,13 +42,13 @@ const HeaderPage = () => {
                 {e.icon}
                 <p>{e.label}</p>
               </div>
-            );
+            )
           })}
           <IconKebabMenu className="header-page__box__menu__btn" />
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default HeaderPage;
+export default HeaderPage

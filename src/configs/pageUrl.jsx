@@ -1,6 +1,6 @@
-import { createBrowserRouter } from 'react-router-dom';
-import { DashBoard, ErrorPage } from '../pages';
-import { MainLayout } from '../layouts';
+import { createBrowserRouter } from 'react-router-dom'
+import { ColumnPage, DashBoard, ErrorPage } from '../pages'
+import { MainLayout } from '../layouts'
 const router = createBrowserRouter([
   {
     element: <MainLayout />,
@@ -10,7 +10,11 @@ const router = createBrowserRouter([
         path: '/',
         element: <DashBoard />,
       },
+      {
+        path: '/column',
+        element: <ColumnPage />,
+      },
     ],
   },
-]);
-export default router;
+])
+export default router

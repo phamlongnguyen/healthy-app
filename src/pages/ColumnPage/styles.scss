@@ -1,0 +1,11 @@
+@use '../../styles/media' as *;
+
+.column-page {
+  @include maxWidthContent;
+  &__button {
+    @include maxWidthContent;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+}
