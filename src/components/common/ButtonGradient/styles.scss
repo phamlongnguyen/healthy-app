@@ -1,0 +1,26 @@
+@use '../../../styles/media' as *;
+
+.button-gradient {
+  background: linear-gradient(32.95deg, #ffcc21 8.75%, #ff963c 86.64%);
+  border: none;
+  min-width: 296px;
+  height: 56px;
+  border-radius: 5px;
+  color: var(--color-white);
+  font-family: Hiragino Kaku Gothic Pro;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:active {
+    transform: scale(0.9);
+  }
+  @include mobile {
+    min-width: 90%;
+  }
+}
