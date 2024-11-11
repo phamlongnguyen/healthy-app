@@ -1,0 +1,68 @@
+.body-record {
+  margin-bottom: 3rem;
+  background-color: var(--color-dark-500);
+  padding: 1rem 1.5rem;
+
+  .line-chart {
+    background-color: var(--color-dark-500);
+    height: 212px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    p {
+      &:first-child {
+        font-family: Inter;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.15000000596046448px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: var(--color-white);
+        white-space: pre-wrap;
+        width: 96px;
+      }
+
+      &:last-child {
+        font-family: Inter;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0.10999999940395355px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: var(--color-white);
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 1rem;
+    &__item {
+      min-width: 56px;
+      height: 24px;
+      font-family: Hiragino Kaku Gothic Pro;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 24px;
+      letter-spacing: 0.07500000298023224px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: var(--color-primary-300);
+      background-color: var(--color-white);
+      border-radius: 11px;
+      cursor: pointer;
+
+      &.active {
+        color: var(--color-white);
+        background-color: var(--color-primary-300);
+      }
+    }
+  }
+}
