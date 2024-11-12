@@ -49,6 +49,35 @@
 
       &__btn {
         cursor: pointer;
+        display: flex;
+      }
+    }
+  }
+}
+
+.popover-header-menu {
+  &__box {
+    background-color: var(--color-gray-400);
+    width: 280px;
+
+    &.MuiList-root {
+      margin: 0;
+      padding: 0;
+    }
+    &__item {
+      height: 72px;
+      line-height: 72px;
+
+      &.MuiMenuItem-root {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: var(--color-white);
+        border-bottom: 1px solid var(--color-dark-600);
+        border-top: 1px solid hsl(0deg 0% 100% / 25%);
       }
     }
   }
