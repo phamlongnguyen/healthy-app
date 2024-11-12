@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
-import './styles.scss';
 import PropTypes from 'prop-types';
+import './styles.scss';
 
 const CircleCanvas = ({ percentage, value }) => {
   const canvasRef = useRef(null);

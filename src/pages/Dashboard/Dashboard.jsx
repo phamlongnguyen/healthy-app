@@ -1,12 +1,11 @@
-import { Grid2 } from '@mui/material'
+import { Grid2 } from '@mui/material';
 import {
   BodyMetricsGraph,
   DateAchievementRate,
   InputTransitionButton,
   MealHistory,
-} from '../../components'
-import './styles.scss'
-import { ButtonGradient } from '../../components/common'
+} from '../../components';
+import './styles.scss';
 
 const Dashboard = () => {
   return (
@@ -19,13 +18,12 @@ const Dashboard = () => {
           <BodyMetricsGraph />
         </Grid2>
       </Grid2>
-      <InputTransitionButton />
-      <MealHistory />
-      <div className="dashboard-page__button">
-        <ButtonGradient label="記録をもっと見る" />
+      <div className="dashboard-page__body">
+        <InputTransitionButton />
+        <MealHistory />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

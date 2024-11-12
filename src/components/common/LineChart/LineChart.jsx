@@ -1,5 +1,5 @@
-import { Line } from 'react-chartjs-2'
-import './styles.scss'
+import { Line } from 'react-chartjs-2';
+import './styles.scss';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -9,7 +9,8 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js'
+} from 'chart.js';
+import PropTypes from 'prop-types';
 
 ChartJS.register(
   CategoryScale,
@@ -19,39 +20,8 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend
-)
-const data = {
-  labels: [
-    '6月',
-    '7月',
-    '8月',
-    '9月',
-    '10月',
-    '11月',
-    '12月',
-    '1月',
-    '2月',
-    '3月',
-    '4月',
-    '5月',
-  ],
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: [90, 85, 70, 80, 75, 70, 80, 75, 70, 65, 60, 55],
-      backgroundColor: '#FFCC21',
-      borderColor: '#FFCC21',
-      fill: false,
-    },
-    {
-      label: 'Dataset 2',
-      data: [95, 90, 75, 85, 80, 75, 85, 80, 75, 70, 65, 60],
-      borderColor: '#8FE9D0',
-      backgroundColor: '#8FE9D0',
-      fill: false,
-    },
-  ],
-}
+);
+
 const options = {
   responsive: true,
   maintainAspectRatio: false,
@@ -80,13 +50,42 @@ const options = {
       },
     },
   },
-}
-const LineChart = () => {
+};
+const LineChart = ({ infoChart }) => {
+  const data = {
+    labels: infoChart.map(e => e.month),
+    datasets: [
+      {
+        label: 'Data 1',
+        data: infoChart.map(e => e.data1),
+        backgroundColor: '#FFCC21',
+        borderColor: '#FFCC21',
+        fill: false,
+      },
+      {
+        label: 'Data 2',
+        data: infoChart.map(e => e.data2),
+        borderColor: '#8FE9D0',
+        backgroundColor: '#8FE9D0',
+        fill: false,
+      },
+    ],
+  };
   return (
     <div className="line-chart">
       <Line data={data} options={options} />
     </div>
-  )
-}
+  );
+};
 
-export default LineChart
+LineChart.propTypes = {
+  infoChart: PropTypes.arrayOf(
+    PropTypes.shape({
+      data1: PropTypes.number,
+      data2: PropTypes.number,
+      month: PropTypes.string,
+    })
+  ),
+};
+
+export default LineChart;

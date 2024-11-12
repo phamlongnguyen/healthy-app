@@ -6,10 +6,8 @@
       height: fit-content;
     }
   }
-  &__button {
+
+  &__body {
     @include maxWidthContent;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3rem;
   }
 }
