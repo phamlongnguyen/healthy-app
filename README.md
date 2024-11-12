@@ -65,6 +65,7 @@ healthy-app/
 ├── src/
 │   ├── assets/            # Static files (fonts, images, etc.)
 │   ├── components/        # Reusable UI components
+│        ├── common/       # Reusable UI common component
 │   ├── configs/           # Application routing and configuration files
 │   ├── hooks/             # Custom hooks for shared logic across components
 │   ├── layouts/           # Page layout structures and reusable templates
@@ -72,8 +73,8 @@ healthy-app/
 │   ├── services/          # API services and external data handlers
 │   ├── styles/            # Global SCSS variables, mixins, and shared styles
 │   ├── utils/             # Helper functions and utilities
-│   ├── App.jsx             # Root component and main application setup
-│   └── index.jsx           # Application entry point
+│   ├── App.jsx            # Root component and main application setup
+│   └── index.jsx          # Application entry point
 └── README.md              # Project documentation and guidelines
 ```
 
