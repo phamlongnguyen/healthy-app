@@ -1,2 +1,30 @@
+@use '../../styles/media' as *;
+
 .main-layout {
+  &__body {
+    &__top {
+      position: fixed;
+      top: 70%;
+      right: calc(((100% - $tablet-width) / 2) - 70px);
+      z-index: 2;
+
+      @include responsive(1160px) {
+        right: 1rem;
+      }
+
+      &__btn {
+        height: 48px;
+        width: 48px;
+        border-radius: 48px;
+        border: 1px solid var(--color-gray-400);
+        background: var(--color-white);
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:active {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
 }

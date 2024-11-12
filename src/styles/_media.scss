@@ -18,3 +18,8 @@ $tablet-width: 960px;
     @content;
   }
 }
+@mixin responsive($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
