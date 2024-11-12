@@ -1,79 +1,104 @@
 @use '../../styles/media' as *;
 
 .topics {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 0.5rem;
-  margin: 3rem 0 2rem;
-  row-gap: 1rem;
-
-  @include tablet {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 1rem;
+  &__loading {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0.5rem;
+    margin: 3rem 0 2rem;
+    row-gap: 1rem;
 
-  @include mobile {
-    grid-template-columns: 1fr;
-    padding: 0 1rem;
-  }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 1rem;
+    }
 
-  &__item {
-    cursor: pointer;
-    &__img {
-      height: 144px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
+    @include mobile {
+      grid-template-columns: 1fr;
+      padding: 0 1rem;
+    }
 
-      p {
-        color: var(--color-white);
-        background-color: var(--color-primary-300);
-        position: absolute;
-        bottom: 0;
-        font-family: Inter;
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 30px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        padding: 0px 13px;
+    &__item {
+      cursor: pointer;
+      &__img {
+        height: 144px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        p {
+          color: var(--color-white);
+          background-color: var(--color-primary-300);
+          position: absolute;
+          bottom: 0;
+          font-family: Inter;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 30px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: var(--color-white);
+          background-color: var(--color-primary-300);
+          position: absolute;
+          bottom: 0;
+          font-family: Inter;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 30px;
+          height: 24px;
+          line-height: 24px;
+          width: 144px;
+          text-align: center;
+        }
       }
-    }
 
-    &__title {
-      font-family: Hiragino Kaku Gothic Pro;
-      font-size: 15px;
-      font-weight: 300;
-      line-height: 22px;
-      letter-spacing: 0.07500000298023224px;
-      text-align: left;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
-      color: var(--color-dark-500);
-      padding-top: 8px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    &__tags {
-      display: flex;
-      gap: 0.5rem;
-      > span {
+      &__title {
         font-family: Hiragino Kaku Gothic Pro;
-        font-size: 12px;
+        font-size: 15px;
         font-weight: 300;
         line-height: 22px;
-        letter-spacing: 0.05999999865889549px;
+        letter-spacing: 0.07500000298023224px;
         text-align: left;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
-        color: var(--color-primary-400);
+        color: var(--color-dark-500);
+        padding-top: 8px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &__tags {
+        display: flex;
+        gap: 0.5rem;
+        > span {
+          font-family: Hiragino Kaku Gothic Pro;
+          font-size: 12px;
+          font-weight: 300;
+          line-height: 22px;
+          letter-spacing: 0.05999999865889549px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          color: var(--color-primary-400);
+        }
       }
     }
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
   }
 }
