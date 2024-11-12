@@ -1,17 +1,13 @@
-import { useState } from 'react'
-import { LineChart } from '../common'
-import './styles.scss'
-import classNames from 'classnames'
-
-const OPTIONS = [
-  { id: 'june', label: '日' },
-  { id: 'july', label: '週' },
-  { id: 'august', label: '月' },
-  { id: 'september', label: '年' },
-]
+import classNames from 'classnames';
+import { CircularProgress } from '@mui/material';
+import useBodyRecord from './hook/useBodyRecord';
+import { OPTIONS_CHART } from './constants';
+import { LineChart } from '../common';
+import './styles.scss';
 
 const BodyRecord = () => {
-  const [tabSelected, setTabSelected] = useState(OPTIONS[0]?.id)
+  const { infoChart, isLoading, tabSelected, handleChangeTab } =
+    useBodyRecord();
 
   return (
     <div className="body-record">
@@ -19,24 +15,32 @@ const BodyRecord = () => {
         <p>BODY RECORD</p>
         <p>2021.05.21</p>
       </div>
-      <LineChart />
+      {isLoading ? (
+        <div className="body-record__top__loading">
+          <CircularProgress color="inherit" />
+        </div>
+      ) : (
+        <LineChart infoChart={infoChart} />
+      )}
       <div className="body-record__bottom">
-        {OPTIONS.map(option => {
+        {OPTIONS_CHART.map(option => {
           return (
             <div
               key={option.id}
               className={classNames('body-record__bottom__item', {
                 active: option.id === tabSelected,
               })}
-              onClick={() => setTabSelected(option.id)}
+              onClick={() => {
+                handleChangeTab(option);
+              }}
             >
               {option.label}
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default BodyRecord
+export default BodyRecord;

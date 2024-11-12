@@ -1,12 +1,10 @@
-import React from 'react'
-import { ButtonGradient } from '../../components/common'
-import './styles.scss'
+import './styles.scss';
 import {
   EntryNavigationButton,
   BodyRecord,
   MyExercise,
   MyDiary,
-} from '../../components'
+} from '../../components';
 
 const MyRecordPage = () => {
   return (
@@ -16,7 +14,7 @@ const MyRecordPage = () => {
       <MyExercise />
       <MyDiary />
     </div>
-  )
-}
+  );
+};
 
-export default MyRecordPage
+export default MyRecordPage;
