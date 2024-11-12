@@ -3,6 +3,17 @@
   src: local('Hiragino Kaku Gothic Pro'),
     url('./assets/fonts/Hiragino Kaku Gothic Pro W3.otf');
 }
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'),
+    url('./assets/fonts/Inter-VariableFont_opsz,wght.ttf');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter Italic'),
+    url('./assets/fonts/Inter-Italic-VariableFont_opsz\,wght.ttf');
+}
 :root {
   font-family: Hiragino Kaku Gothic Pro, Inter, system-ui, Avenir, Helvetica,
     Arial, sans-serif;

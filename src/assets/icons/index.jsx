@@ -213,3 +213,38 @@ export const IconCup = props => {
     </svg>
   );
 };
+
+export const IconClose = props => {
+  return (
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <rect opacity="0.01" width="32" height="32" fill="#FF963C" />
+      <path d="M7 7L26 26" stroke="#FF963C" strokeWidth="3" />
+      <path d="M7 26L26 7" stroke="#FF963C" strokeWidth="3" />
+    </svg>
+  );
+};
+
+export const IconArrowUp = props => {
+  return (
+    <svg
+      width="16"
+      height="10"
+      viewBox="0 0 16 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M14.5852 9.04198L8.00017 2.65788L1.41513 9.04198L0.53894 8.19253L8.00018 0.958984L15.4614 8.19253L14.5852 9.04198Z"
+        fill="#777777"
+      />
+    </svg>
+  );
+};
