@@ -1,11 +1,11 @@
 import { CircularProgress } from '@mui/material';
-import './styles.scss';
 import PropTypes from 'prop-types';
+import './styles.scss';
 
 const ButtonGradient = ({ loading, label, onClick }) => {
   return (
     <button className="button-gradient" onClick={onClick}>
-      {loading ? <CircularProgress size={24} /> : label}
+      {loading ? <CircularProgress size={24} color="inherit" /> : label}
     </button>
   );
 };
